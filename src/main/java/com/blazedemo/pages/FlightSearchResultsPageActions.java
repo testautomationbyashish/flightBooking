@@ -52,26 +52,12 @@ public class FlightSearchResultsPageActions {
         
 	}
 	
-	/*public void getRowDetails(WebElement listview ,int row) throws Throwable
-	{
-		if(flightSearchResultsPageLoc.SearchResults_FromFlightsListView.isDisplayed())
-			System.out.println("found");
-		else
-			System.out.println("not found");
-		//WebElement element=flightSearchResultsPageLoc.SearchResults_FromFlightsListView.findElement(By.xpath("li["+row+"]"));
-		WebElement element=listview.findElement(By.xpath("li["+row+"]"));
-	//	List<String>rowData=getSelectedRowData(element);
-	}
-	*/
 	
-	/* get the Flight Details of the selected row 
-	 * listview --complete all the flights (parent view of) of either onWard or Return journery
-	 * */
 	
 	public java.util.List<String> getSelectedRowData(WebElement listview ,int row) throws Throwable {
         
 		
-		WebElement element=listview.findElement(By.xpath("li["+row+"]"));
+	WebElement element=listview.findElement(By.xpath("li["+row+"]"));
         java.util.List<String> flightData = new ArrayList<String>();
         List<WebElement> colData = element.findElements(By.tagName("th"));
         System.out.println("table column size:" + colData.size());
