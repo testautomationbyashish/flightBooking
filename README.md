@@ -19,4 +19,16 @@ Major Test Cases:
 7) Title of page should be  BlazeDemo.
 8) User should see Tick Mark against the city he has selected.
 9) If User selects third city in Departure say Boston => goes to Destination=> Now Boston should be displayed in Highlighted text of Departure.
-10) 
+10) User should be able to click Find Flights button.
+11) Find Flights button should get clicked even if user presses Tab and Enter on keyboard. He should now land on https://blazedemo.com/reserve.php
+12) User should see text like "Flights from São Paolo to Rome:". Verify this has correct city names as selected on previous page.
+13) User should not see vice-versa message like  "Flights from Rome to São Paolo:" on reservation page.
+14) Verify that 6 columns a)Choose b)Flight# c)Airline d)Departs: São Paolo e)Arrives: Rome f)Price should be displayed.
+15) Verify that Choose this flight button is selectable under Choose column.
+16) Verify that time of departure/arrival is displayed in AM/PM format. 
+17) Hours should not be greater than 12
+18) Minutes should not be greater than 60.
+19) Verify Departs: São Paolo column displayed correct cityname as booked on page1.
+20) Verify Arrives: Rome column displays correct cityname as booked on page1.
+21) Verify that all flight prices are displayed with a $ dollar symbol.
+22) 
