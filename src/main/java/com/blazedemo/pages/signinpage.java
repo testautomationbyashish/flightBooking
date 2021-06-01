@@ -1,7 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
-import utils.CommonUtils;
+import utils.CommonMethods;
 
 /**
  * Created by tmaher on 12/21/2015.
