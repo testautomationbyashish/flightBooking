@@ -8,6 +8,19 @@ BUG2)
 The same message "Your flight from TLV to SFO has been reserved" is displayed on blazedemo.com/purchase.php regardless of whichever flight you book.
 For example if user books a flight from Paris airport to Rome OR Boston to London, he will get same message that "Your flight from TLV to SFO has been reserved".
 
+BUG3)
+On blazedemo.com/purchase.php Airline name is being displayed as United irrespective of whichever flight you choose on Reservation page.
+
+BUG4)
+On blazedemo.com/purchase.php Flight Number is being displayed as UA954 irrespective of whichever flight you choose on Reservation page.
+
+BUG5)
+On blazedemo.com/purchase.php Price is being displayed as 400 irrespective of whichever flight you choose on Reservation page.
+
+BUG6)
+On blazedemo.com/purchase.php Total Cost is being displayed as 914.76 irrespective of whichever flight you choose on Reservation page.
+
+
 
 Major Test Cases:
 1) User should not be allowed to choose same city in Departure as well as Destination on Blazedemo.com 
@@ -31,4 +44,20 @@ Major Test Cases:
 19) Verify Departs: São Paolo column displayed correct cityname as booked on page1.
 20) Verify Arrives: Rome column displays correct cityname as booked on page1.
 21) Verify that all flight prices are displayed with a $ dollar symbol.
-22) 
+22) Verify correct message is displayed on https://blazedemo.com/purchase.php If user selected flight 9696 then Message should be Your flight from Sao Paulo to Rome has been reserved.
+23) Verify https://blazedemo.com/purchase.php should display airline name as Aer Lingus for flight 9696.
+24) Verify Flight number 9696 is displayed on purchase page.
+25) Verify Price should be same on Reserve as well as Purchase page. $200.98 for flight 9696.
+26) Verify total cost should be sum of Price + Arbitrary Fees and Taxes
+27) Verify user should be able to enter his firstname/lastname in Name input field.
+28) Verify user should be able to enter alphanumeric address in Address input field.
+29) Verify user should be able to enter his Cityname in City input field.
+30) Verify user should be able to enter his State in State input field.
+31) Verify user should be able to enter his Zipcode in Zipcode input field.AlphaNumeric values should be allowed.
+32) Verify User should be able to select Card Type Visa/AmericanExpress/Diner's Club by selecting list box.
+33) Verify User should enter 16 digit credit card number. Alphabets should not be allowed.
+34) Verify less than 16 digits should not be allowed in credit card number.No special characters allowed.
+35) 
+36) 
+37) 
+38) 
