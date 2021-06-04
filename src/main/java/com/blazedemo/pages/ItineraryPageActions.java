@@ -26,60 +26,23 @@ public class ItineraryPageActions {
 	
 	public void getOnwardJourneyFlightDetails()
 	{
-		List<WebElement>details=itinaryPageloc.itinerary_onWardJourney.findElements(By.tagName("li"));
-		System.err.println("count:"+details.size());
-		onWardFlightDetailsItineraryPage.add(details.get(0).findElement(By.cssSelector("span.name")).getText());
-		onWardFlightDetailsItineraryPage.add(details.get(1).findElement(By.cssSelector("span.placeTime")).getText());
-		onWardFlightDetailsItineraryPage.add(details.get(2).getText());
-		onWardFlightDetailsItineraryPage.add(details.get(3).findElement(By.cssSelector("span.placeTime")).getText());
-	
-	//	Reporter.addStepLog("Itinerary Page onWard Flight Details:"+onWardFlightDetailsItineraryPage.toString());
-		System.err.println(details.get(0).findElement(By.cssSelector("span.name")).getText());
-		System.err.println(details.get(1).findElement(By.cssSelector("span.placeTime")).getText());
-		System.err.println(details.get(2).getText());
-		System.err.println(details.get(3).findElement(By.cssSelector("span.placeTime")).getText());
-		/*System.err.println("------------------------");
-		for(WebElement ele:details)
-				System.err.println(ele.getText());
 		
-		System.err.println("------------------------");*/
 	}
 
 	public void getReturnJourneyFlightDetails()
 	{
-		List<WebElement>details=itinaryPageloc.itinerary_returnJourney.findElements(By.tagName("li"));
-		System.err.println("count:"+details.size());
-		returnFlightDetailsItineraryPage.add(details.get(0).findElement(By.cssSelector("span.name")).getText());
-		returnFlightDetailsItineraryPage.add(details.get(1).findElement(By.cssSelector("span.placeTime")).getText());
-		returnFlightDetailsItineraryPage.add(details.get(2).getText());
-		returnFlightDetailsItineraryPage.add(details.get(3).findElement(By.cssSelector("span.placeTime")).getText());
 		
-	//	Reporter.addStepLog("Itinerary Page return Flight Details:"+returnFlightDetailsItineraryPage.toString());
-		
-		System.err.println(details.get(0).findElement(By.cssSelector("span.name")).getText());
-		System.err.println(details.get(1).findElement(By.cssSelector("span.placeTime")).getText());
-		System.err.println(details.get(2).getText());
-		System.err.println(details.get(3).findElement(By.cssSelector("span.placeTime")).getText());
-		/*System.err.println("------------------------");
-		for(WebElement ele:details)
-				System.err.println(ele.getText());
-		
-		System.err.println("------------------------");*/
 	}
 	
 	
 	public void verifyItineraryOnWardFlightDetails_With_SearchPageOnwardFlightDetails()
 	{
-		System.err.println(onWardFlightDetailsItineraryPage.contains(new FlightsSearchResults().onWardFlightDetails));
-		Reporter.addStepLog("Search Page onWard Flight Details:" +new FlightsSearchResults().onWardFlightDetails );
-		Reporter.addStepLog("Itinerary Page onWard Flight Details:"+onWardFlightDetailsItineraryPage);
+		
 	}
 	
 	public void verifyItineraryReturnFlightDetails_With_SearchPageRetunFlightDetails()
 	{
-		System.err.println(returnFlightDetailsItineraryPage.contains(new FlightsSearchResults().returnFlightDetails));
-		Reporter.addStepLog("Search Page onWard Flight Details:" +new FlightsSearchResults().returnFlightDetails);
-		Reporter.addStepLog("Itinerary Page return Flight Details:"+returnFlightDetailsItineraryPage);
+		
 	}
 	
 	
