@@ -19,7 +19,7 @@ public class CommonMethods {
 	public void waitForElementToAppear(WebDriver driver,String loc) {
         Wait<WebDriver> wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(loc)));
-        //By.xpath("\"" + loc + "\"")
+       
         
         
     }
@@ -27,7 +27,7 @@ public class CommonMethods {
 	public void waitFortextToBePresentInElement(WebDriver driver,WebElement element,String text) {
         Wait<WebDriver> wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.textToBePresentInElement(element,text));
-        //By.xpath("\"" + loc + "\"")
+        
         
         
     }
@@ -54,13 +54,13 @@ public class CommonMethods {
 			Thread.sleep(milliSeconds);
 		}
 		catch (Exception e) {
-			// TODO: handle exception
+			
 		}
 	}
 	
 	public boolean isAlertPresent(){
 	    boolean foundAlert = false;
-	    WebDriverWait wait = new WebDriverWait(SeleniumDriver.getDriver(), 10 /*timeout in seconds*/);
+	    WebDriverWait wait = new WebDriverWait(SeleniumDriver.getDriver(), 10 );
 	    try {
 	        wait.until(ExpectedConditions.alertIsPresent());
 	        foundAlert = true;
