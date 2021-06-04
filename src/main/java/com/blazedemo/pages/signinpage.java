@@ -3,9 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import utils.CommonMethods;
 
-/**
- * Created by tmaher on 12/21/2015.
- */
+
 public class SignInPage extends CommonUtils {
 
     private final By USERNAME = By.name("E-Mail Address");
