@@ -36,6 +36,6 @@ Feature: Blazedemo Acceptance testing.
     
     
     Examples:  
-    |  From    			|  To   			 |
+    |  FromCity   			|  ToCity   			 |
     | "Paris"     	| "Buenos Aires"        |
    
