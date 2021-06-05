@@ -43,7 +43,19 @@ public class bookflight {
         String baseUrl = "https://blazedemo.com/";
         String expectedTitle = " BlazeDemo";
         String actualTitle = "";
+	    String fromCity="Boston";
+	    String toCity="London";
 
+	    /*
+         * compare the actual title of the page with the expected one and print
+         * the result as "Passed" or "Failed"
+         */
+        if (actualTitle.contentEquals(expectedTitle)){
+            System.out.println("Title is correct; Passed!");
+        } else {
+            System.out.println("Title is incorrect; Failed");
+        }
+	    
         // launch Fire fox and direct it to the Base URL
         driver.get(baseUrl);
 
@@ -51,13 +63,24 @@ public class bookflight {
         actualTitle = driver.getTitle();
         
         Select departureCity = new Select(driver.findElement(By.name("fromPort")));
-        departureCity.selectByVisibleText("Boston");
+        departureCity.selectByVisibleText(fromCity);
         
      
         Select destinationCity = new Select(driver.findElement(By.name("toPort")));
-        destinationCity.selectByVisibleText("London");
+        destinationCity.selectByVisibleText(toCity);
         
-        driver.findElement(By.cssSelector("input.btn.btn-primary")).click();
+	    //test whether departs column on page 2 has correct fromCity in the column header
+        
+	    String expectedHeaders = String.join( "Departs:",fromCity);
+    String visibleHeaders = driver.findElement(By.xpath("//table[@class='table']/tbody/tr[1]/th[3]).getText();
+
+    Assert.assertEquals(visibleHeaders, expectedHeaders);
+				    
+//test whether arrives column on page 2 has correct fromCity in the column header
+        String expectedHeaders = String.join( "Arrives:",toCity);
+    String visibleHeaders = driver.findElement(By.xpath("//table[@class='table']/tbody/tr[1]/th[4]).getText();
+
+    Assert.assertEquals(visibleHeaders, expectedHeaders);
         
         driver.findElement(By.xpath("//table[@class='table']/tbody/tr[4]/td[1]/input")).click();
 
@@ -74,15 +97,7 @@ public class bookflight {
             driver.findElement(By.cssSelector("input.btn.btn-primary")).click();
 
 
-        /*
-         * compare the actual title of the page with the expected one and print
-         * the result as "Passed" or "Failed"
-         */
-        if (actualTitle.contentEquals(expectedTitle)){
-            System.out.println("Title is correct; Passed!");
-        } else {
-            System.out.println("Title is incorrect; Failed");
-        }
+        
        
         
        // driver.close();
