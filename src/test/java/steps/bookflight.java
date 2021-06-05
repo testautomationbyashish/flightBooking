@@ -99,11 +99,11 @@ public class bookflight {
 						     
     	// Fill form
         driver.findElement(By.id("inputName")).sendKeys("FirstName LastName");
-        driver.findElement(By.id("address")).sendKeys("123 Beautiful st.");
-        driver.findElement(By.id("city")).sendKeys("Santa Clara");
-        driver.findElement(By.id("state")).sendKeys("CA");
+        driver.findElement(By.id("address")).sendKeys("123 Beautiful st. Delhi Road");
+        driver.findElement(By.id("city")).sendKeys("Jaipur");
+        driver.findElement(By.id("state")).sendKeys("Rajasthan");
         driver.findElement(By.id("zipCode")).sendKeys("12345");
-        driver.findElement(By.id("creditCardNumber")).sendKeys("1234 5678 8765 4321");
+        driver.findElement(By.id("creditCardNumber")).sendKeys("1234567887654321");
             driver.findElement(By.id("nameOnCard")).sendKeys("FirstName LastName");
 
     	// click Purchase
