@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="stepdefs.test04june2021"/>
+      <class name="steps.bookflight"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
