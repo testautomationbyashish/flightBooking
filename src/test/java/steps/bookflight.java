@@ -72,7 +72,7 @@ public class bookflight {
 	    //test whether departs column on page 2 has correct fromCity in the column header
         
 	    String expectedHeaders = String.join( "Departs:",fromCity);
-    String visibleHeaders = driver.findElement(By.xpath("//table[@class='table']/tbody/tr[1]/th[3]).getText();
+    String visibleHeaders = driver.findElement(By.xpath("//table[@class='table']/tbody/tr[1]/th[3])).getText();
 
     Assert.assertEquals(visibleHeaders, expectedHeaders);
 				    
@@ -81,9 +81,22 @@ public class bookflight {
     String visibleHeaders = driver.findElement(By.xpath("//table[@class='table']/tbody/tr[1]/th[4]).getText();
 
     Assert.assertEquals(visibleHeaders, expectedHeaders);
-        
+							
+	//Storing name of airline and flight number to verify on next page
+	String flightnum= driver.findElement(By.xpath("//table[@class='table']/tbody/tr[4]/td[2])).getText();	
+	String airline = driver.findElement(By.xpath("//table[@class='table']/tbody/tr[4]/td[3])).getText();						      
+						      
+        //Choosing the flight
         driver.findElement(By.xpath("//table[@class='table']/tbody/tr[4]/td[1]/input")).click();
 
+	String PurchasePageActualTitle = driver.findElement(By.xpath("//div/div/table/tbody/tr/td/h2[@class='container']")).getText();	
+	String PurchasePageExpectedTitle = ("Your flight from" + fromCity + "to" + toCity + "has been reserved.");
+	Assert.assertEquals(PurchasePageActualTitle, PurchasePageExpectedTitle);
+						     
+	 Assert.assertEquals(driver.findElement(By.xpath("//div/div/table/tbody/tr/td/[@class='container']/h2/following-sibling::text()[1]")).contains(airline));
+	Assert.assertEquals(driver.findElement(By.xpath("//div/div/table/tbody/tr/td/[@class='container']/h2/following-sibling::text()[1]")).contains(flightnum));				     
+						     
+						     
     	// Fill form
         driver.findElement(By.id("inputName")).sendKeys("FirstName LastName");
         driver.findElement(By.id("address")).sendKeys("123 Beautiful st.");
