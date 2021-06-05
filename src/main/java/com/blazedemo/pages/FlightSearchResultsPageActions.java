@@ -11,7 +11,7 @@ import com.blazedemo.pages.locators.FlightSearchResultsPageLocators;
 import com.blazedemo.pages.locators.FlightsSearchPageLocators;
 import com.blazedemo.utils.CommonMethods;
 import com.blazedemo.utils.SeleniumDriver;
-import com.cucumber.listener.Reporter;
+
 
 public class FlightSearchResultsPageActions {
 	
