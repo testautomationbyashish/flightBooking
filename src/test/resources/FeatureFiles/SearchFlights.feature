@@ -1,3 +1,5 @@
+#WRITING THIS FEATURE FILE JUST TO INCORPORATE BDD IN FLIGHTBOOKING TEST. I HAVE NOT CREATED STEP DEFINITIONS OUT OF THIS FEATURE FILE DUE TO TIME SHORTAGE
+
 Feature: Blazedemo Acceptance testing.
   In order to book the tickets verify that blazedemo page is loading and user is able to book the tickets.
   
