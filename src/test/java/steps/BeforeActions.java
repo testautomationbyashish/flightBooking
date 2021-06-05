@@ -1,7 +1,7 @@
 package steps;
 
 import cucumber.api.java.Before;
-import com.clearTrip.utils.SeleniumDriver;
+import com.blazedemo.utils.SeleniumDriver;
 
 public class BeforeActions  {
 
