@@ -58,7 +58,10 @@ Major Test Cases:
 32) Verify User should be able to select Card Type Visa/AmericanExpress/Diner's Club by selecting list box.
 33) Verify User should enter 16 digit credit card number. Alphabets should not be allowed.
 34) Verify less than 16 digits should not be allowed in credit card number.No special characters allowed.
-35) 
-36) 
-37) 
-38) 
+35) Verify Year and month of card entered should be greater than equal to current date.
+36) Verify Name on card field should not be left blank.
+37) Verify Remember Me checkbix is working correctly.
+38) Verify Purchase Now button gives Successful Purchase message on Confirmation page.
+39) Verify amount is displayed correctly on Purchase page.
+40) Verify if user navigates back on browser after Confirmation Page, he should get error.
+
