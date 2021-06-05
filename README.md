@@ -21,6 +21,8 @@ On blazedemo.com/purchase.php Price is being displayed as 400 irrespective of wh
 BUG6)
 On blazedemo.com/purchase.php Total Cost is being displayed as 914.76 irrespective of whichever flight you choose on Reservation page.
 
+BUG7) 
+User should not be allowed to go back from https://blazedemo.com/confirmation.php and make changes once payment has been done.
 
 
 Major Test Cases:
